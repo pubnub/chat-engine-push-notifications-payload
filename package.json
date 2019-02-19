@@ -1,0 +1,96 @@
+{
+  "name": "chat-engine-push-notifications-payload",
+  "description": "ChatEngine APN an GCM / FCM notification payload generation plugin. ",
+  "homepage": "https://github.com/pubnub/chat-engine-push-notifications-payload#readme",
+  "version": "0.0.1",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Serhii Mamontov <sergey@pubnub.com>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pubnub/chat-engine-push-notifications-payload.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pubnub/chat-engine-push-notifications-payload/issues"
+  },
+  "main": "src/plugin.js",
+  "scripts": {
+    "test": "jest --ci --forceExit",
+    "unit_test": "jest --ci --forceExit --config=test/unit/jest-config.json --testPathPattern=test/unit/",
+    "integration_test": "jest --ci --forceExit --config=test/integration/jest-config.json --testPathPattern=test/integration/"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-jest": "^24.0.0",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-react": "^7.12.4",
+    "gulp": "3.x.x",
+    "gulp-eslint": "^5.0.0",
+    "gulp-shell": "^0.6.5",
+    "jest": "^24.0.0",
+    "jest-cli": "^24.0.0",
+    "metro-react-native-babel-preset": "^0.51.1"
+  },
+  "peerDependencies": {
+    "chat-engine": "0.9.x"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov",
+      "clover"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/test/",
+      "<rootDir>/demo/",
+      "<rootDir>/node_modules/"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/demo/",
+      "<rootDir>/node_modules/(?!react|fbjs|react-native|react-transform-hmr|core-js|promise)/",
+      "<rootDir>/node_modules/react-native/Libraries/react-native/"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/.idea",
+      "<rootDir>/Libraries/",
+      "<rootDir>/coverage/",
+      "<rootDir>/docs/",
+      "<rootDir>/demo/",
+      "<rootDir>/node_modules/",
+      "/node_modules/"
+    ],
+    "notify": true,
+    "preset": "react-native"
+  },
+  "keywords": [
+    "chatengine",
+    "chat",
+    "sdk",
+    "realtime",
+    "pubnub",
+    "notifications"
+  ]
+}
