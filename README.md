@@ -45,7 +45,7 @@ ChatEngine.global.notificationsPayload.markAllNotificationAsSeen();
 3. Listen for the `$notifications.seen` events (on local user `direct` chat) to know, when this user 
 seen notification for event on another device. 
 ```js
-ChatEngine.me.direct.on('$notifications.seen', () => {
+ChatEngine.me.direct.on('$notifications.seen', (payload) => {
     console.log(payload.data.eid, ' has been seen from another ChatEngine instance');
 });
 ```
