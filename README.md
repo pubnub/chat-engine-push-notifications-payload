@@ -13,7 +13,7 @@ const ChatEngine = ChatEngineCore.create({
     subscribeKey: 'sub-key-here',
 });
 
-ChatEngine.connect('Username');
+ChatEngine.connect('uuid');
 ChatEngine.on('$.ready', () => { ... });
 ```
 
@@ -27,7 +27,17 @@ let configuration = {
     })
 };
 
+/**
+ * Call to 'plugin()' function on chat will register plugin only for that chat. 
+ * 'global' is pre-defined chat, but can be any user-made chat.
+ */
 ChatEngine.global.plugin(ChatEngineCore.plugin['chat-engine-push-notifications-payload'](configuration));
+
+/**
+ * to register plugin for all created chats, place this line along with
+ * configuration object before calling 'ChatEngine.connect()'.
+ */
+ChatEngine.proto('Chat', ChatEngineCore.plugin['chat-engine-push-notifications-payload'](configuration));
 ```
 
 2. If it is required to mark notifications for event as `seen`, following methods can be used
