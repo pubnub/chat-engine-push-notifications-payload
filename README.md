@@ -1,3 +1,7 @@
+This repository is a part of the [ChatEngine Framework](https://github.com/pubnub/chat-engine).
+For more information on building chat applications with PubNub, see our
+[Chat Resource Center](http://www.pubnub.com/developers/chat-resource-center/).
+
 # Push Notifications Payload Plugin
 
 Adds the ability to add to modify event payload with data, which is used to trigger remote push 
@@ -62,4 +66,4 @@ ChatEngine.me.direct.on('$notifications.seen', (payload) => {
 
 ## Support
 
-- If you **need help**, have a **general question** a **feature request** or to file a **bug**, contact <support@pubnub.com>
+- If you **need help**, have a **general question**, have a **feature request** or to file a **bug**, contact <support@pubnub.com>.
